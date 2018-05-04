@@ -2,10 +2,11 @@
   "name": "mixd",
   "version": "1.0.0",
   "description": "Mixins?",
-  "main": "dist/bundle.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ebam"
+    "pretest": "npm run build",
+    "test": "cd test && node src.js",
+    "build": "rollup -c"
   },
   "keywords": [
     "mixin",
@@ -13,23 +14,8 @@
   ],
   "author": "Quentin Engles <hollowdoor99@gmail.com> (https://hollowdoor.github.io/)",
   "license": "MIT",
-  "ebam": {
-    "input": "src/index.js",
-    "transforms": {
-      "dangerousForOf": false,
-      "dangerousTaggedTemplateString": false
-    },
-    "test": {
-      "dest": "test/code.js",
-      "src": "test/src.js"
-    },
-    "name": "mixd",
-    "external": [
-      "object.getownpropertydescriptors"
-    ]
-  },
-  "jsnext:main": "dist/bundle.es.js",
-  "module": "dist/bundle.es.js",
+  "jsnext:main": "src/index.js",
+  "module": "src/index.js",
   "dependencies": {
     "object.getownpropertydescriptors": "^2.0.3"
   },

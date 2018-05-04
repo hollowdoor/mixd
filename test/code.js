@@ -1715,6 +1715,7 @@
 	    return dest;
 	}
 
+
 	function mixin(Class, o){
 	    if ( o === void 0 ) { o = {}; }
 
@@ -1763,12 +1764,14 @@
 	    return mixin(Class, o);
 	}
 
-	var T = function T(v){
-	    this.value = v;
-	};
-	T.prototype.m0 = function m0 (){
-	    return 0;
-	};
+	class T {
+	    constructor(v){
+	        this.value = v;
+	    }
+	    m0(){
+	        return 0;
+	    }
+	}
 
 	var thing1 = mixd(T);
 	var thing2 = thing1.mixin({

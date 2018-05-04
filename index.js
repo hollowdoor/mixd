@@ -1,6 +1,12 @@
-import getDescriptors from 'object.getownpropertydescriptors';
+'use strict';
 
-export function assign(dest, ...src){
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var getDescriptors = _interopDefault(require('object.getownpropertydescriptors'));
+
+function assign(dest, ...src){
     src.forEach(o=>{
         Object.defineProperties(
             dest,
@@ -37,6 +43,9 @@ function mixin(Class, o = {}){
     return C;
 }
 
-export function mixd(Class, o){
+function mixd(Class, o){
     return mixin(Class, o);
 }
+
+exports.assign = assign;
+exports.mixd = mixd;

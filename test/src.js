@@ -1,4 +1,4 @@
-import {mixd} from '../';
+const {mixd} = require('../');
 
 class T {
     constructor(v){
