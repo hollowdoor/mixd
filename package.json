@@ -1,0 +1,48 @@
+{
+  "name": "mixd",
+  "version": "1.0.0",
+  "description": "Mixins?",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ebam"
+  },
+  "keywords": [
+    "mixin",
+    "class"
+  ],
+  "author": "Quentin Engles <hollowdoor99@gmail.com> (https://hollowdoor.github.io/)",
+  "license": "MIT",
+  "ebam": {
+    "input": "src/index.js",
+    "transforms": {
+      "dangerousForOf": false,
+      "dangerousTaggedTemplateString": false
+    },
+    "test": {
+      "dest": "test/code.js",
+      "src": "test/src.js"
+    },
+    "name": "mixd",
+    "external": [
+      "object.getownpropertydescriptors"
+    ]
+  },
+  "jsnext:main": "dist/bundle.es.js",
+  "module": "dist/bundle.es.js",
+  "dependencies": {
+    "object.getownpropertydescriptors": "^2.0.3"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hollowdoor/mixd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hollowdoor/mixd/issues"
+  },
+  "homepage": "https://github.com/hollowdoor/mixd#readme"
+}
